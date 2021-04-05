@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body{
+	background-color: #ECECEC;
+	margin: 0;
+	padding: 0;
+}
+
+.spaceX {
+	font-family: Quicksand;
+	font-weight: 600;
+	color: #284b63;
+	text-align: center;
+	margin: 2%;
+}
+
+h2 {
+	font-family: Quicksand;
+	color: #284b63;
+}
+
+.boven {
+	color: white;
+}
+
+.grid-container {
+	max-width: 80%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 2%;
+}
+
+.grid-item{
+	height: 125px;
+	width: 325px;
+	text-align: center;
+}
+
+#weather {
+	background: #284b63;
+}
+
+#time {
+	background: #284b63;
+}
+
+#map {
+
+	background: white;
+	margin-top: 10px;
+}
