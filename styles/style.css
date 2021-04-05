@@ -1,51 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-body{
+body {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
 	background-color: #ECECEC;
-	margin: 0;
-	padding: 0;
 }
 
-.spaceX {
+/*mobile*/
+.grid-container {
+	display: grid; 
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+		"weather"
+		"time" 
+		"map" 
+		;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+	
+}
+
+
+/*Laptop*/
+@media only screen and (min-width: 1440px) {
+	.grid-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr;
+		grid-template-areas: 
+			"weather time"
+			"map map"
+			;
+	max-width: 900px;
+	margin: 0px auto;
+
+	}
+}
+
+h1 {
+	text-align: center;
 	font-family: Quicksand;
 	font-weight: 600;
 	color: #284b63;
-	text-align: center;
-	margin: 2%;
+	margin: 0;
+	padding-top: 20px;
 }
 
 h2 {
-	font-family: Quicksand;
-	color: #284b63;
-}
-
-.boven {
 	color: white;
+	padding: 20px;
+	margin: 0px;
 }
 
-.grid-container {
-	max-width: 80%;
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-gap: 2%;
-}
-
-.grid-item{
-	height: 125px;
-	width: 325px;
+.grid-item {
 	text-align: center;
 }
 
+
 #weather {
-	background: #284b63;
+	grid-area: weather;
+	font-family: Quicksand;
+	color: white;
+	/*background-color: red;*/
 }
 
 #time {
-	background: #284b63;
+	grid-area: time;
+	font-family: Quicksand;
+	color: white;
+	/*background-color: green;*/
 }
 
 #map {
+	grid-area: map;
+	font-family: Quicksand;
+	/*background-color: blue;*/
+}
 
-	background: white;
-	margin-top: 10px;
+#mapBox {
+	height: 400px;
+	width: 895px;
+	background-color: #284b63;
+	margin: 0px auto;
+}
+
+.nested {
+  	display: grid;
+  	grid-template-rows: repeat(2, 1fr);
+  	background-color: #284b63;
+  	height: 200px;
+  	width: 444px;
+  	margin: 0px auto;
+  	margin-top: 45px;
+}
+
+#mapImg {
+	background-color: white;
+}
+
+#weatherText, #timeText {
+	height: 100px;
+	width: 200px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	font-size: 28px;
+/*	background-color: #284b63;*/
+
+}
+
+#mapImg {
+	height: 305px;
+	width: 850px;
+	margin: 0px auto;
 }

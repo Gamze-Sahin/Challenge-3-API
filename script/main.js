@@ -27,6 +27,7 @@ function getAPIdata() {
 	.catch(function (error) {
 		onAPIError(error);
 	});
+
 }
 
 
@@ -38,14 +39,16 @@ function onAPISucces(response) {
 	var degC = Math.floor(response.main.temp - 273.15);
 
 	// render weather in DOM
-	var weatherBox = document.getElementById('weather');
+	var weatherBox = document.getElementById('weatherText');
 	weatherBox.innerHTML = degC + '&#176;C <br>' + type;
+
+	console.log(response);
 }
 
 
 function onAPIError(error) {
 	console.error('Request failed', error);
-	var weatherBox = document.getElementById('weather');
+	var weatherBox = document.getElementById('weatherText');
 	weatherBox.className = 'hidden'; 
 }
 
@@ -79,12 +82,8 @@ function showTime(){
     s = (s < 10) ? "0" + s : s;
     
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("clockDisplay").innerHTML = time;
-    document.getElementById("clockDisplay").textContent = time;
+    document.getElementById("timeText").innerHTML = time;
 	
-	var date = day + "-" + month + "-" + year;
-	document.getElementById("dateDisplay").innerHTML = date;
-	document.getElementById("dateDisplay").textContent = date;
     
     setTimeout(showTime, 1000);
     
@@ -99,7 +98,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtemVzYWhpbiIsImEiOiJja21rbTYxbGoxMm92MnBuY
 
 // Initialate map
 var map = new mapboxgl.Map({
-  container: 'map',
+  container: 'mapImg',
   style: 'mapbox://styles/mapbox/streets-v11',
 
   // Positioning the map on a certain longitute + latitude and zooming in
