@@ -3,7 +3,7 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	overflow: hidden;
+	overflow: auto;
 	background-color: #ECECEC;
 }
 
@@ -23,60 +23,15 @@ body {
 .nested {
   	display: grid;
   	background-color: #284b63;
+  	margin: 0;
+  	margin-left: 10px;
 
 }
 
-
-
-
-/*Tablet*/
-@media only screen and (min-width: 768px) {
-
-	
-
-
-#mapBox {
-	height: 50px;
-	width: 80px;
-	background-color: #284b63;
-	margin: 0px auto;
-}
-
-#mapImg {
-	background-color: white;
-}
-
-#weatherText, #timeText {
-	height: 50px;
-	width: 80px;
-	margin: 0px auto;
-	margin-bottom: 20px;
-	font-size: 28px;
-/*	background-color: #284b63;*/
-
-}
 
 #mapImg {
 	height: 100px;
 	width: 50px;
-}
-	
-}
-
-
-/*Laptop*/
-@media only screen and (min-width: 1440px) {
-	.grid-container {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 0.5fr 1fr;
-		grid-template-areas: 
-			"weather time"
-			"map map"
-			;
-	max-width: 900px;
-	margin: 0px auto;
-
-	}
 }
 
 h1 {
@@ -84,7 +39,7 @@ h1 {
 	font-family: Quicksand;
 	font-weight: 600;
 	color: #284b63;
-	margin: 0;
+	margin-top: 20px;
 	padding-top: 20px;
 }
 
@@ -113,6 +68,7 @@ h2 {
 	/*background-color: green;*/
 }
 
+
 #map {
 	grid-area: map;
 	font-family: Quicksand;
@@ -120,8 +76,8 @@ h2 {
 }
 
 #mapBox {
-	height: 400px;
-	width: 895px;
+	height: 150px;
+	width: 300px;
 	background-color: #284b63;
 	margin: 0px auto;
 }
@@ -130,15 +86,107 @@ h2 {
   	display: grid;
   	grid-template-rows: repeat(2, 1fr);
   	background-color: #284b63;
-  	height: 200px;
-  	width: 444px;
-  	margin: 0px auto;
-  	margin-top: 45px;
+  	height: 150px;
+  	width: 300px;
+  	margin-left: 15px;
+  	font-size: 12px;
 }
 
 #mapImg {
 	background-color: white;
 }
+
+#weatherText, #timeText {
+	height: 50px;
+	width: 100px;
+	/*margin-bottom: 20px;*/
+	font-size: 20px;
+	margin-left: 100px;
+/*	background-color: #284b63;*/
+}
+
+#mapImg {
+	height: 150px;
+	width: 300px;
+	margin: 0px auto;
+}
+
+
+
+
+
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+	.grid-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr;
+		grid-template-areas: 
+			"weather time"
+			"map map";
+	max-width: 900px;
+	margin: 0px auto;
+	}
+
+
+#mapBox {
+	height: 50px;
+	width: 80px;
+	background-color: #284b63;
+}
+
+#mapImg {
+	background-color: white;
+}
+
+#weatherText, #timeText {
+	height: 50px;
+	width: 80px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	font-size: 28px;
+/*	background-color: #284b63;*/
+
+}
+
+#mapImg {
+	height: 220px;
+	width: 750px;
+}
+
+h1 {
+	margin: 0;
+	padding-top: 20px;
+}
+
+h2 {
+	color: white;
+	padding: 20px;
+	margin: 0px;
+}
+
+.grid-item {
+	text-align: center;
+}
+
+#mapBox {
+	height: 220px;
+	width: 750px;
+	background-color: #284b63;
+	margin: 0px auto;
+	margin-top: 10px;
+
+}
+
+.nested {
+  	display: grid;
+  	grid-template-rows: repeat(2, 1fr);
+  	background-color: #284b63;
+  	height: 180px;
+  	width: 300px;
+  	margin: 0px auto;
+  	margin-top: 45px;
+}
+
 
 #weatherText, #timeText {
 	height: 100px;
@@ -150,7 +198,57 @@ h2 {
 }
 
 #mapImg {
+	height: 220px;
+	width: 750px;
+	margin: 0px auto;
+}
+	
+}
+
+
+/*Laptop*/
+@media only screen and (min-width: 1440px) {
+
+h1 {
+	margin: 0;
+	padding-top: 20px;
+}
+
+h2 {
+	padding: 20px;
+	margin: 0px;
+}
+
+.grid-item {
+	text-align: center;
+}
+
+
+#mapBox {
+	height: 400px;
+	width: 895px;
+	margin: 0px auto;
+}
+
+.nested {
+  	display: grid;
+  	grid-template-rows: repeat(2, 1fr);
+  	height: 200px;
+  	width: 444px;
+  	margin: 0px auto;
+  	margin-top: 45px;
+}
+
+#weatherText, #timeText {
+	height: 100px;
+	width: 200px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+}
+
+#mapImg {
 	height: 305px;
 	width: 850px;
 	margin: 0px auto;
+}
 }

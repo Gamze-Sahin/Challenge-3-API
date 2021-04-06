@@ -102,14 +102,14 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/streets-v11',
 
   // Positioning the map on a certain longitute + latitude and zooming in
-  center: [4.322840, 52.067101],
+  center: [-80.6026, 28.6050],
   zoom: 15,
 });
 
-var popup = new mapboxgl.Popup().setHTML('<h3>De Haagse Hogeschool</h3><p>Is momenteel dicht.</p>');
+var popup = new mapboxgl.Popup().setHTML('<h3>Kennedy Space Center</h3><p>Final destination</p>');
 
 // Adding a marker based on lon lat coordinates
 var marker = new mapboxgl.Marker()
-  .setLngLat([4.324439, 52.067200])
+  .setLngLat([-80.6026, 28.6050])
   .setPopup(popup)
   .addTo(map);
